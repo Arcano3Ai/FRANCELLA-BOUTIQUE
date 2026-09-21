@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initSmoothScroll();
     initAmbientMusic();
     initVideoIntroModal();
+    initChicCursor();
 });
 
 /* ==========================================================================
@@ -484,5 +485,142 @@ function initVideoIntroModal() {
     // Al terminar el video de bienvenida, entrar a la tienda y comenzar la música
     introVideo.addEventListener("ended", () => {
         closeVideoModal();
+    });
+}
+
+/* ==========================================================================
+   9. Chic Glamour Cursor & Sparkle Magic Trail Controller
+   ========================================================================== */
+function initChicCursor() {
+    // Si el dispositivo no tiene mouse de precisión (móviles/tablets), no inicializar
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        return;
+    }
+
+    const dot = document.getElementById("chic-cursor-dot");
+    const ring = document.getElementById("chic-cursor-ring");
+    const container = document.getElementById("chic-sparkles-container");
+
+    if (!dot || !ring) return;
+
+    let mouseX = -100;
+    let mouseY = -100;
+    let ringX = -100;
+    let ringY = -100;
+    let isVisible = false;
+    let lastSparkleTime = 0;
+
+    const sparkleIcons = ["✨", "✦", "✧", "💖", "🌸", "♡"];
+
+    // Render loop fluido con lerp para el ring
+    function renderCursor() {
+        if (isVisible) {
+            // Lerp easing sutil
+            ringX += (mouseX - ringX) * 0.18;
+            ringY += (mouseY - ringY) * 0.18;
+
+            dot.style.left = `${mouseX}px`;
+            dot.style.top = `${mouseY}px`;
+
+            ring.style.left = `${ringX}px`;
+            ring.style.top = `${ringY}px`;
+        }
+
+        requestAnimationFrame(renderCursor);
+    }
+    requestAnimationFrame(renderCursor);
+
+    // Crear partículas mágicas de destellos al mover el puntero
+    function createSparkle(x, y, isBurst = false) {
+        if (!container) return;
+
+        const sparkle = document.createElement("span");
+        sparkle.className = "chic-sparkle-particle";
+        const icon = sparkleIcons[Math.floor(Math.random() * sparkleIcons.length)];
+        sparkle.textContent = icon;
+
+        // Variación aleatoria
+        const offsetX = (Math.random() - 0.5) * (isBurst ? 45 : 18);
+        const offsetY = (Math.random() - 0.5) * (isBurst ? 45 : 18);
+        const randomSize = isBurst ? (0.9 + Math.random() * 0.5) : (0.65 + Math.random() * 0.4);
+
+        sparkle.style.left = `${x + offsetX}px`;
+        sparkle.style.top = `${y + offsetY}px`;
+        sparkle.style.fontSize = `${randomSize}rem`;
+
+        container.appendChild(sparkle);
+
+        setTimeout(() => {
+            if (sparkle.parentNode) {
+                sparkle.parentNode.removeChild(sparkle);
+            }
+        }, 750);
+    }
+
+    // Movimiento del cursor
+    window.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        if (!isVisible) {
+            isVisible = true;
+            dot.style.opacity = "1";
+            ring.style.opacity = "1";
+            ringX = mouseX;
+            ringY = mouseY;
+        }
+
+        // Throttle para generar destellos etéreos
+        const now = performance.now();
+        if (now - lastSparkleTime > 55) {
+            createSparkle(mouseX, mouseY);
+            lastSparkleTime = now;
+        }
+    }, { passive: true });
+
+    // Clic / Presión
+    window.addEventListener("mousedown", (e) => {
+        ring.classList.add("cursor-active");
+        dot.classList.add("cursor-active");
+
+        // Ráfaga chic de 4 destellos
+        for (let i = 0; i < 4; i++) {
+            createSparkle(e.clientX, e.clientY, true);
+        }
+    });
+
+    window.addEventListener("mouseup", () => {
+        ring.classList.remove("cursor-active");
+        dot.classList.remove("cursor-active");
+    });
+
+    // Detectar cuando el cursor entra y sale de la ventana
+    document.addEventListener("mouseleave", () => {
+        isVisible = false;
+        dot.style.opacity = "0";
+        ring.style.opacity = "0";
+    });
+
+    document.addEventListener("mouseenter", () => {
+        isVisible = true;
+        dot.style.opacity = "1";
+        ring.style.opacity = "1";
+    });
+
+    // Hover interactivo sobre botones, enlaces y productos
+    const interactiveSelector = "a, button, input, [role='button'], .product-card, .category-card, .insta-item, .size-btn, .quick-tag";
+
+    document.addEventListener("mouseover", (e) => {
+        if (e.target.closest(interactiveSelector)) {
+            ring.classList.add("cursor-hover");
+            dot.classList.add("cursor-hover");
+        }
+    });
+
+    document.addEventListener("mouseout", (e) => {
+        if (e.target.closest(interactiveSelector)) {
+            ring.classList.remove("cursor-hover");
+            dot.classList.remove("cursor-hover");
+        }
     });
 }
