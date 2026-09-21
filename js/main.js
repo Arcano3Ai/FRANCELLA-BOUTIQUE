@@ -228,15 +228,12 @@ function initQuickView() {
             });
         }
 
-        // On mobile, tap on image box also opens quickview
-        const imgBox = card.querySelector(".product-img-box");
-        if (imgBox) {
-            imgBox.addEventListener("click", (e) => {
-                if (window.innerWidth <= 768 && !e.target.closest(".product-wishlist-btn")) {
-                    openModal(data);
-                }
-            });
-        }
+        // On mobile, tap on card opens quickview (except wishlist button)
+        card.addEventListener("click", (e) => {
+            if (window.innerWidth <= 768 && !e.target.closest(".product-wishlist-btn")) {
+                openModal(data);
+            }
+        });
     });
 
     // Size selector buttons in modal
