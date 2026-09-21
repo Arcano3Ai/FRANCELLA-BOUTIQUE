@@ -5,7 +5,7 @@ Sitio web e-commerce y catálogo digital exclusivo para la boutique **FRANCELLA 
 ## ✨ Características y Experiencia de Usuario
 
 - **Identidad Visual Chic & Glamour:** Paleta de colores curada en fucsia chic (`#FF1493`, `#FF4D94`), dorados champán y marfil, tipografías elegantes (*Playfair Display*, *Caveat*, *Poppins*).
-- **Música Ambiental Integrada:** Reproducción continua de boutique lounge (*Boutique Vibe Pt. 1*) con ecualizador visual dinámico y controles intuitivos de Pausa/Reproducción en header y widget flotante permanente.
+- **Música Ambiental Integrada:** Reproducción continua de boutique lounge (*Francela Final Fluid Whisper Jingle*) con ecualizador visual dinámico y controles intuitivos de Pausa/Reproducción en header y widget flotante permanente.
 - **Video Intro Interactivo:** Presentación multimedia con animación del logo e identidad de la boutique.
 - **Catálogo de Moda Completo:**
   - Categorías principales (Vestidos, Blusas, Jeans, Pantalones, Conjuntos y Accesorios).
@@ -24,7 +24,7 @@ Sitio web e-commerce y catálogo digital exclusivo para la boutique **FRANCELLA 
 │   ├── Coleccion/       # Fotografía y catálogo de prendas
 │   ├── Flyers/          # Anuncios y banners promocionales
 │   ├── IDENTIDAD/       # Logotipos e isotipos oficiales
-│   ├── Musica/          # Audio ambiental (Boutique Vibe)
+│   ├── Musica/          # Audio ambiental (Fluid Whisper Jingle)
 │   └── video/           # Video de identidad y bienvenida
 ├── css/
 │   └── style.css        # Sistema de diseño, tokens, animaciones y responsive UI

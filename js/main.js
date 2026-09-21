@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initAmbientMusic();
     initVideoIntroModal();
     initChicCursor();
+    initProposalVideo();
 });
 
 /* ==========================================================================
@@ -328,12 +329,12 @@ function initAmbientMusic() {
             if (isPlaying) {
                 floatingBtn.classList.remove("is-paused");
                 floatingBtn.classList.add("is-playing");
-                floatingBtn.setAttribute("title", "Pausar música Boutique Vibe");
+                floatingBtn.setAttribute("title", "Pausar música Fluid Whisper");
                 if (floatingLabel) floatingLabel.textContent = "Reproduciendo";
             } else {
                 floatingBtn.classList.remove("is-playing");
                 floatingBtn.classList.add("is-paused");
-                floatingBtn.setAttribute("title", "Reproducir música Boutique Vibe");
+                floatingBtn.setAttribute("title", "Reproducir música Fluid Whisper");
                 if (floatingLabel) floatingLabel.textContent = "Pausado";
             }
         }
@@ -620,4 +621,51 @@ function initChicCursor() {
             dot.classList.remove("cursor-hover");
         }
     });
+}
+
+/* ==========================================================================
+   10. Sincronización de Audio con Video de Propuesta de Agente Web
+   ========================================================================== */
+function initProposalVideo() {
+    const proposalVideo = document.getElementById("proposal-video");
+    if (!proposalVideo) return;
+
+    let wasMusicPlayingBeforeProposal = false;
+
+    proposalVideo.addEventListener("play", () => {
+        if (globalAmbientAudio && !globalAmbientAudio.paused) {
+            wasMusicPlayingBeforeProposal = true;
+            globalAmbientAudio.pause();
+            const headerBtn = document.getElementById("audio-toggle-btn");
+            const floatingBtn = document.getElementById("floating-music-btn");
+            if (headerBtn) {
+                headerBtn.classList.remove("is-playing");
+                headerBtn.classList.add("is-paused");
+            }
+            if (floatingBtn) {
+                floatingBtn.classList.remove("is-playing");
+                floatingBtn.classList.add("is-paused");
+            }
+        }
+    });
+
+    function resumeMusicIfAppropriate() {
+        if (wasMusicPlayingBeforeProposal && !isAudioManuallyPaused && globalAmbientAudio) {
+            globalAmbientAudio.play().catch(() => {});
+            const headerBtn = document.getElementById("audio-toggle-btn");
+            const floatingBtn = document.getElementById("floating-music-btn");
+            if (headerBtn) {
+                headerBtn.classList.remove("is-paused");
+                headerBtn.classList.add("is-playing");
+            }
+            if (floatingBtn) {
+                floatingBtn.classList.remove("is-paused");
+                floatingBtn.classList.add("is-playing");
+            }
+            wasMusicPlayingBeforeProposal = false;
+        }
+    }
+
+    proposalVideo.addEventListener("pause", resumeMusicIfAppropriate);
+    proposalVideo.addEventListener("ended", resumeMusicIfAppropriate);
 }
