@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRANCELLA COLLECTION | Boutique de Moda Femenina</title>
+    <meta name="description" content="FRANCELLA COLLECTION - Boutique de moda femenina. Descubre vestidos, blusas, jeans, conjuntos y las últimas tendencias pensadas para hacerte sentir cómoda, segura y espectacular.">
+    <meta property="og:title" content="FRANCELLA COLLECTION | Boutique de Moda Femenina">
+    <meta property="og:description" content="Moda que te encanta ♡ Prendas pensadas para hacerte sentir cómoda, segura y espectacular.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/IDENTIDAD/LogoNuevo.png">
+    <link rel="icon" type="image/png" href="assets/IDENTIDAD/LogoNuevo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- AMBIENT BOUTIQUE MUSIC -->
+    <audio id="ambient-audio" loop preload="auto">
+        <source src="assets/Musica/Boutique Vibe Pt. 1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- VIDEO INTRO POP-UP MODAL -->
+    <div id="video-intro-overlay" class="video-intro-overlay">
+        <div class="video-popup-container">
+            <button id="close-intro-btn" class="video-popup-close-btn" aria-label="Cerrar video">&times;</button>
+            <div class="video-popup-badge">✨ BIENVENIDA A FRANCELLA COLLECTION ✨</div>
+            <div class="video-wrapper">
+                <video id="intro-video" playsinline controls preload="auto">
+                    <source src="assets/video/Francella_Collection_logo_animating_20260921022013.mp4" type="video/mp4">
+                    Tu navegador no soporta video MP4.
+                </video>
+            </div>
+            <div class="video-popup-footer">
+                <span class="video-music-label">🎵 Francella Collection Song & Logo</span>
+                <button id="enter-boutique-btn" class="btn-enter-boutique">
+                    <span>ENTRAR A LA TIENDA ♡</span>
+                    <div class="btn-shimmer"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOP MARQUESINA CONTINUA CHIC -->
+    <div class="top-announcement-bar">
+        <div class="marquee-track marquee-track-fast">
+            <span>✨ ENVÍOS GRATIS A TODO EL PAÍS EN COMPRAS DESDE $999 • 💖 MODA QUE TE ENCANTA • PRENDAS EXCLUSIVAS DE BOUTIQUE • 🌸 NUEVOS LOOKS CADA SEMANA • ♡ ENCUENTRA TU FAVORITO • 🛍️ COMPRA SEGURA ONLINE • ✨</span>
+            <span>✨ ENVÍOS GRATIS A TODO EL PAÍS EN COMPRAS DESDE $999 • 💖 MODA QUE TE ENCANTA • PRENDAS EXCLUSIVAS DE BOUTIQUE • 🌸 NUEVOS LOOKS CADA SEMANA • ♡ ENCUENTRA TU FAVORITO • 🛍️ COMPRA SEGURA ONLINE • ✨</span>
+        </div>
+    </div>
+
+    <!-- 1. HEADER -->
+    <header class="main-header" id="navbar">
+        <div class="nav-container">
+            <!-- Mobile Hamburger Toggle -->
+            <button class="menu-toggle" id="menu-toggle-btn" aria-label="Abrir menú" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Brand Logo / Identity -->
+            <a href="#hero" class="nav-brand" id="brand-logo-link">
+                <div class="brand-logo-glow-wrap">
+                    <img src="assets/IDENTIDAD/LogoNuevo.png" alt="Francella Collection Logo" class="brand-logo-img">
+                    <div class="logo-sparkle-dot"></div>
+                </div>
+                <div class="brand-text-wrap">
+                    <span class="brand-title">FRANCELLA</span>
+                    <span class="brand-subtitle">COLLECTION</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="nav-links" id="main-nav-links">
+                <a href="#hero" class="nav-link active">Inicio</a>
+                <a href="#nueva-coleccion" class="nav-link">Nueva colección</a>
+                <a href="#categoria-vestidos" class="nav-link">Vestidos</a>
+                <a href="#categoria-blusas" class="nav-link">Blusas</a>
+                <a href="#categoria-jeans" class="nav-link">Jeans</a>
+                <a href="#categoria-pantalones" class="nav-link">Pantalones</a>
+                <a href="#ofertas" class="nav-link nav-link-highlight">
+                    <span class="nav-fire-icon">🔥</span> Ofertas
+                </a>
+            </nav>
+
+            <!-- Header Right Actions -->
+            <div class="nav-actions">
+                <!-- Ambient Music Play/Pause Chic Button -->
+                <button class="nav-icon-btn btn-audio-toggle is-playing" id="audio-toggle-btn" aria-label="Control de música boutique" title="Pausar música">
+                    <span class="music-wave-bars">
+                        <span class="mbar mbar-1"></span>
+                        <span class="mbar mbar-2"></span>
+                        <span class="mbar mbar-3"></span>
+                    </span>
+                    <span class="nav-action-label audio-status-text">Pausar</span>
+                </button>
+
+                <button class="nav-icon-btn btn-watch-intro" aria-label="Ver video intro con música" title="Ver Video Intro">
+                    <span class="nav-video-play-icon">▶</span>
+                    <span class="nav-action-label">Video</span>
+                </button>
+
+                <button class="nav-icon-btn" id="btn-search-toggle" aria-label="Buscar productos">
+                    <svg class="nav-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span class="nav-action-label">Buscar</span>
+                </button>
+
+                <button class="nav-icon-btn" id="btn-wishlist-toggle" aria-label="Ver favoritos">
+                    <svg class="nav-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span class="badge-count" id="wishlist-badge">0</span>
+                    <span class="nav-action-label">Favoritos</span>
+                </button>
+
+                <button class="nav-icon-btn cart-btn-wrap" id="btn-cart-toggle" aria-label="Ver carrito de compras">
+                    <svg class="nav-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="badge-count" id="cart-badge">2</span>
+                    <span class="nav-action-label">Carrito</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <div class="mobile-brand">
+                    <img src="assets/IDENTIDAD/LogoNuevo.png" alt="Francella Logo" class="brand-logo-img">
+                    <span class="brand-title">FRANCELLA</span>
+                </div>
+                <button class="mobile-close-btn" id="mobile-close-btn" aria-label="Cerrar menú">&times;</button>
+            </div>
+            <nav class="mobile-nav-links">
+                <button class="btn-watch-intro mobile-video-btn">▶ Ver Video con Canción 🎵</button>
+                <a href="#hero" class="mobile-nav-link">Inicio</a>
+                <a href="#nueva-coleccion" class="mobile-nav-link">Nueva colección</a>
+                <a href="#categoria-vestidos" class="mobile-nav-link">Vestidos</a>
+                <a href="#categoria-blusas" class="mobile-nav-link">Blusas</a>
+                <a href="#categoria-jeans" class="mobile-nav-link">Jeans</a>
+                <a href="#categoria-pantalones" class="mobile-nav-link">Pantalones</a>
+                <a href="#ofertas" class="mobile-nav-link mobile-highlight">🔥 Grandes Descuentos</a>
+            </nav>
+            <div class="mobile-menu-footer">
+                <p class="mobile-footer-text">Moda que te encanta ♡</p>
+                <div class="mobile-socials">
+                    <a href="https://www.instagram.com/francella.mx?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.facebook.com/francella.mx" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Overlay Modal -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-modal-box">
+            <button class="search-close-btn" id="search-close-btn" aria-label="Cerrar búsqueda">&times;</button>
+            <h3 class="search-title">¿Qué look estás buscando hoy? ✨</h3>
+            <div class="search-input-wrap">
+                <input type="text" id="search-input" placeholder="Buscar vestidos, jeans, blusas, conjuntos..." autocomplete="off">
+                <button class="btn-search-submit" aria-label="Ejecutar búsqueda">
+                    <svg class="nav-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="search-quick-tags">
+                <span>Populares:</span>
+                <a href="#categoria-vestidos" class="quick-tag">👗 Vestidos de gala</a>
+                <a href="#categoria-jeans" class="quick-tag">👖 Jeans Cello</a>
+                <a href="#categoria-blusas" class="quick-tag">👚 Blusas satinadas</a>
+                <a href="#ofertas" class="quick-tag">🔥 Descuentos Carpa</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Slide-out Drawer -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+        <div class="cart-drawer" id="cart-drawer">
+            <div class="cart-drawer-header">
+                <h3 class="cart-drawer-title">Mi Bolsa Chic (<span id="cart-drawer-count">2</span>) 💖</h3>
+                <button class="cart-drawer-close" id="cart-drawer-close" aria-label="Cerrar carrito">&times;</button>
+            </div>
+            <div class="cart-drawer-items" id="cart-drawer-items">
+                <div class="cart-item">
+                    <img src="assets/Coleccion/723111238_18081577676559568_4753160914651193393_n.jpg_20260921022709.jpeg" alt="Vestido Gala Carmesí Francella" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <h4 class="cart-item-name">Vestido Gala Carmesí</h4>
+                        <span class="cart-item-meta">Talla: M • Color: Rojo Boutique</span>
+                        <div class="cart-item-price-row">
+                            <span class="cart-item-price">$890.00 MXN</span>
+                            <span class="cart-item-qty">Cant: 1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg" alt="Jeans Cargo Cello Francella" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <h4 class="cart-item-name">Pantalón Cello Cargo</h4>
+                        <span class="cart-item-meta">Talla: 7 • Denim Classic</span>
+                        <div class="cart-item-price-row">
+                            <span class="cart-item-price">$680.00 MXN</span>
+                            <span class="cart-item-qty">Cant: 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-drawer-footer">
+                <div class="cart-subtotal-row">
+                    <span>Subtotal</span>
+                    <span class="cart-subtotal-price" id="cart-subtotal">$1,570.00 MXN</span>
+                </div>
+                <p class="cart-shipping-note">✨ ¡Felicidades! Tienes envío gratis asegurado</p>
+                <button class="btn-checkout" onclick="alert('¡Gracias por elegir Francella Collection! Proceso de compra conectado visualmente.');">
+                    <span>FINALIZAR COMPRA</span>
+                    <div class="btn-shimmer"></div>
+                </button>
+                <button class="btn-continue-shopping" id="btn-continue-shopping">Seguir Explorando Looks</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Product Modal -->
+    <div class="quickview-overlay" id="quickview-modal">
+        <div class="quickview-box">
+            <button class="quickview-close-btn" id="quickview-close-btn">&times;</button>
+            <div class="quickview-grid">
+                <div class="quickview-image-wrap">
+                    <img src="assets/Coleccion/723111238_18081577676559568_4753160914651193393_n.jpg_20260921022709.jpeg" alt="Producto Francella" id="qv-img" class="quickview-img">
+                </div>
+                <div class="quickview-details">
+                    <span class="quickview-badge" id="qv-badge">✨ NUEVO</span>
+                    <h3 class="quickview-title" id="qv-title">Vestido Gala Carmesí</h3>
+                    <div class="quickview-prices">
+                        <span class="qv-price-current" id="qv-price">$890.00 MXN</span>
+                        <span class="qv-price-old" id="qv-old-price">$1,150.00 MXN</span>
+                    </div>
+                    <p class="quickview-desc" id="qv-desc">Confección boutique de alta calidad, caída elegante y ajuste favorecedor que estiliza tu figura con absoluta comodidad.</p>
+                    <div class="quickview-size-selector">
+                        <label>Selecciona tu Talla:</label>
+                        <div class="size-options">
+                            <button class="size-btn">CH (S)</button>
+                            <button class="size-btn active">M</button>
+                            <button class="size-btn">G (L)</button>
+                        </div>
+                    </div>
+                    <div class="quickview-actions">
+                        <button class="btn-primary qv-add-btn" id="qv-add-cart-btn">
+                            <span>AÑADIR A LA BOLSA</span>
+                            <div class="btn-shimmer"></div>
+                        </button>
+                    </div>
+                    <div class="quickview-perks">
+                        <span>💖 Prenda 100% garantizada de boutique</span>
+                        <span>✨ Cambios fáciles y atención personalizada por WhatsApp</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <main id="main-content">
+        <!-- 2. HERO PRINCIPAL -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-blobs">
+                <div class="chic-blob blob-pink"></div>
+                <div class="chic-blob blob-glitter"></div>
+                <div class="chic-blob blob-rose"></div>
+            </div>
+
+            <div class="hero-container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-eyebrow">
+                            <span class="eyebrow-pill">✨ BOUTIQUE FEMENINA EXCLUSIVA</span>
+                            <span class="chic-handwriting-callout">Moda que te encanta ♡</span>
+                        </div>
+                        <h1 class="hero-title">
+                            MODA QUE <br>
+                            <span class="hero-title-italic gradient-text-chic">TE INSPIRA</span>
+                        </h1>
+                        <h2 class="hero-lead">Descubre tu próximo look favorito</h2>
+                        <p class="hero-subtitle">
+                            "Prendas pensadas para hacerte sentir cómoda, segura y espectacular."
+                        </p>
+                        <div class="hero-ctas">
+                            <a href="#nueva-coleccion" class="btn-primary hero-btn btn-glow">
+                                <span>VER COLECCIÓN</span>
+                                <div class="btn-shimmer"></div>
+                            </a>
+                            <a href="#ofertas" class="btn-secondary hero-btn btn-chic-outline">
+                                <span>VER OFERTAS 🔥</span>
+                            </a>
+                            <button class="btn-watch-intro btn-hero-video" aria-label="Ver video con canción">
+                                <span>▶ Ver Video & Canción</span>
+                            </button>
+                        </div>
+                        <div class="hero-features-strip">
+                            <div class="hero-feat-item">
+                                <span class="feat-icon">💖</span>
+                                <span class="feat-label">Diseños de Boutique</span>
+                            </div>
+                            <div class="hero-feat-item">
+                                <span class="feat-icon">✨</span>
+                                <span class="feat-label">Telas Premium</span>
+                            </div>
+                            <div class="hero-feat-item">
+                                <span class="feat-icon">💎</span>
+                                <span class="feat-label">Estilo & Actitud</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="hero-image-card">
+                            <div class="hero-glitter-border"></div>
+                            <div class="hero-image-inner">
+                                <img src="assets/Coleccion/723111238_18081577676559568_4753160914651193393_n.jpg_20260921022709.jpeg" alt="Francella Collection Look Estrella" class="hero-img-main">
+                                <div class="hero-img-overlay"></div>
+                            </div>
+                            <!-- Chic Floating Stickers -->
+                            <div class="hero-floating-tag tag-top chic-glass-pill">
+                                <span class="tag-sparkle">✨</span>
+                                <div class="tag-text">
+                                    <strong>Nueva Colección 2026</strong>
+                                    <span>Prendas seleccionadas</span>
+                                </div>
+                            </div>
+                            <div class="hero-floating-tag tag-bottom chic-glass-pill">
+                                <span class="tag-heart">♡</span>
+                                <div class="tag-text">
+                                    <strong class="font-handwriting">Francella Collection</strong>
+                                    <span>Estilo, comodidad y actitud</span>
+                                </div>
+                            </div>
+                            <div class="chic-stamp-badge">
+                                <span>100%</span>
+                                <small>CHIC</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-soft-bottom-glow"></div>
+        </section>
+
+        <!-- MARQUESINA CHIC #1: RUNWAY BOUTIQUE TAPE -->
+        <div class="chic-marquee-band marquee-glam">
+            <div class="marquee-track">
+                <span>💖 FRANCELLA BOUTIQUE ✧ NUEVA TEMPORADA 2026 ✧ VESTIDOS DE ENSUEÑO ✧ JEANS CELLO CON ACTITUD ✧ BLUSAS DE SEDA ✧ MODA QUE TE ENCANTA ✧ COMPRA ONLINE ✧ ENVÍOS A TODO MÉXICO ✧ LOOKS EXCLUSIVOS ✧ SIENTE TU PODER ✧</span>
+                <span>💖 FRANCELLA BOUTIQUE ✧ NUEVA TEMPORADA 2026 ✧ VESTIDOS DE ENSUEÑO ✧ JEANS CELLO CON ACTITUD ✧ BLUSAS DE SEDA ✧ MODA QUE TE ENCANTA ✧ COMPRA ONLINE ✧ ENVÍOS A TODO MÉXICO ✧ LOOKS EXCLUSIVOS ✧ SIENTE TU PODER ✧</span>
+            </div>
+        </div>
+
+        <!-- 3. CATEGORÍAS ("DESCUBRE TU ESTILO") -->
+        <section class="categories-section" id="categorias">
+            <div class="site-container">
+                <div class="section-header-wrap">
+                    <span class="section-pretitle">✨ COLECCIONES DESTACADAS ✨</span>
+                    <h2 class="section-main-title">DESCUBRE TU ESTILO</h2>
+                    <span class="chic-signature-sub">"Prendas creadas para inspirarte cada día ♡"</span>
+                    <p class="section-subtitle">Explora nuestras categorías pensadas para cada momento de tu día</p>
+                </div>
+
+                <div class="categories-grid">
+                    <!-- 1. Vestidos -->
+                    <a href="#productos" class="category-card" id="categoria-vestidos">
+                        <div class="cat-image-wrap">
+                            <img src="assets/Coleccion/502654341_18040784588559568_3704246550184302102_n.jpg_20260921023048.jpeg" alt="Vestidos Francella" class="cat-img" loading="lazy">
+                            <div class="cat-overlay"></div>
+                        </div>
+                        <div class="cat-info">
+                            <span class="chic-tag-sticker">Must Have 💖</span>
+                            <span class="cat-count">Colección Exclusiva</span>
+                            <h3 class="cat-name">Vestidos</h3>
+                            <span class="cat-action">Explorar vestidos →</span>
+                        </div>
+                    </a>
+
+                    <!-- 2. Blusas -->
+                    <a href="#productos" class="category-card" id="categoria-blusas">
+                        <div class="cat-image-wrap">
+                            <img src="assets/Coleccion/590414129_18061678637559568_4099939275443039249_n.jpg_20260921022929.jpeg" alt="Blusas Francella" class="cat-img" loading="lazy">
+                            <div class="cat-overlay"></div>
+                        </div>
+                        <div class="cat-info">
+                            <span class="chic-tag-sticker">Trend Alert ✨</span>
+                            <span class="cat-count">Diseños de Moda</span>
+                            <h3 class="cat-name">Blusas</h3>
+                            <span class="cat-action">Explorar blusas →</span>
+                        </div>
+                    </a>
+
+                    <!-- 3. Jeans -->
+                    <a href="#productos" class="category-card" id="categoria-jeans">
+                        <div class="cat-image-wrap">
+                            <img src="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg" alt="Jeans Francella" class="cat-img" loading="lazy">
+                            <div class="cat-overlay"></div>
+                        </div>
+                        <div class="cat-info">
+                            <span class="chic-tag-sticker">Cello Denim 🔥</span>
+                            <span class="cat-count">Estilo & Comodidad</span>
+                            <h3 class="cat-name">Jeans</h3>
+                            <span class="cat-action">Explorar jeans →</span>
+                        </div>
+                    </a>
+
+                    <!-- 4. Pantalones -->
+                    <a href="#productos" class="category-card" id="categoria-pantalones">
+                        <div class="cat-image-wrap">
+                            <img src="assets/Coleccion/600851504_18062073803559568_2813211033782814434_n.jpg_20260921023625.jpeg" alt="Pantalones y Palazzos Francella" class="cat-img" loading="lazy">
+                            <div class="cat-overlay"></div>
+                        </div>
+                        <div class="cat-info">
+                            <span class="chic-tag-sticker">Elegancia Diaria 🌸</span>
+                            <span class="cat-count">Corte Favorecedor</span>
+                            <h3 class="cat-name">Pantalones</h3>
+                            <span class="cat-action">Explorar pantalones →</span>
+                        </div>
+                    </a>
+
+                    <!-- 5. Conjuntos -->
+                    <a href="#productos" class="category-card" id="categoria-conjuntos">
+                        <div class="cat-image-wrap">
+                            <img src="assets/Coleccion/550188635_18051975962559568_2052544455169986920_n.jpg" alt="Conjuntos Francella" class="cat-img" loading="lazy">
+                            <div class="cat-overlay"></div>
+                        </div>
+                        <div class="cat-info">
+                            <span class="chic-tag-sticker">Total Look 💎</span>
+                            <span class="cat-count">Sets Completos</span>
+                            <h3 class="cat-name">Conjuntos</h3>
+                            <span class="cat-action">Explorar conjuntos →</span>
+                        </div>
+                    </a>
+
+                    <!-- 6. Nueva colección -->
+                    <a href="#nueva-coleccion" class="category-card card-featured" id="categoria-nueva-coleccion">
+                        <div class="cat-image-wrap">
+                            <img src="assets/Coleccion/572532509_18057943133559568_1373157235384384913_n.jpg" alt="Nueva Colección Francella" class="cat-img" loading="lazy">
+                            <div class="cat-overlay"></div>
+                        </div>
+                        <div class="cat-info">
+                            <span class="chic-tag-sticker-gold">Edición Limitada 2026 ✨</span>
+                            <h3 class="cat-name">Nueva colección</h3>
+                            <span class="cat-action">Ver novedades →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PRODUCTOS DESTACADOS ("FAVORITOS DE LA SEMANA") -->
+        <section class="products-section" id="productos">
+            <div class="site-container">
+                <div class="section-header-wrap">
+                    <span class="section-pretitle">💖 SELECCIÓN BOUTIQUE 💖</span>
+                    <h2 class="section-main-title">FAVORITOS DE LA SEMANA</h2>
+                    <p class="section-subtitle">Prendas auténticas de la colección Francella amadas por nuestras clientas</p>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-id="1" data-name="Vestido Gala Carmesí" data-price="$890.00" data-oldprice="$1,150.00" data-badge="Nuevo" data-img="assets/Coleccion/723111238_18081577676559568_4753160914651193393_n.jpg_20260921022709.jpeg">
+                        <div class="product-img-box">
+                            <img src="assets/Coleccion/723111238_18081577676559568_4753160914651193393_n.jpg_20260921022709.jpeg" alt="Vestido Gala Carmesí" class="product-image" loading="lazy">
+                            <span class="product-badge badge-new">✨ Nuevo</span>
+                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="product-quickview-btn">Ver producto</button>
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Vestidos</span>
+                            <h3 class="product-title">Vestido Gala Carmesí</h3>
+                            <div class="product-pricing">
+                                <span class="price-current">$890.00</span>
+                                <span class="price-old">$1,150.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-id="2" data-name="Vestido Silueta Mostaza" data-price="$750.00" data-oldprice="" data-badge="" data-img="assets/Coleccion/628153545_18067140161559568_3864033881685993988_n.jpg_20260921022319.jpeg">
+                        <div class="product-img-box">
+                            <img src="assets/Coleccion/628153545_18067140161559568_3864033881685993988_n.jpg_20260921022319.jpeg" alt="Vestido Silueta Mostaza" class="product-image" loading="lazy">
+                            <span class="product-badge badge-chic">💖 Chic</span>
+                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="product-quickview-btn">Ver producto</button>
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Vestidos</span>
+                            <h3 class="product-title">Vestido Silueta Mostaza</h3>
+                            <div class="product-pricing">
+                                <span class="price-current">$750.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-id="3" data-name="Pantalón Cello Cargo Denim" data-price="$680.00" data-oldprice="$850.00" data-badge="Nuevo" data-img="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg">
+                        <div class="product-img-box">
+                            <img src="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg" alt="Pantalón Cello Cargo Denim" class="product-image" loading="lazy">
+                            <span class="product-badge badge-trend">🔥 Cello Denim</span>
+                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="product-quickview-btn">Ver producto</button>
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Jeans</span>
+                            <h3 class="product-title">Pantalón Cello Cargo Denim</h3>
+                            <div class="product-pricing">
+                                <span class="price-current">$680.00</span>
+                                <span class="price-old">$850.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card" data-id="4" data-name="Conjunto Urbano Palazzo" data-price="$720.00" data-oldprice="" data-badge="" data-img="assets/Coleccion/600851504_18062073803559568_2813211033782814434_n.jpg_20260921023625.jpeg">
+                        <div class="product-img-box">
+                            <img src="assets/Coleccion/600851504_18062073803559568_2813211033782814434_n.jpg_20260921023625.jpeg" alt="Conjunto Urbano Palazzo" class="product-image" loading="lazy">
+                            <span class="product-badge badge-new">✨ Nuevo</span>
+                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="product-quickview-btn">Ver producto</button>
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Pantalones</span>
+                            <h3 class="product-title">Conjunto Urbano Palazzo</h3>
+                            <div class="product-pricing">
+                                <span class="price-current">$720.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card" data-id="5" data-name="Set Dos Piezas Pastel" data-price="$820.00" data-oldprice="" data-badge="Nuevo" data-img="assets/Coleccion/550188635_18051975962559568_2052544455169986920_n.jpg">
+                        <div class="product-img-box">
+                            <img src="assets/Coleccion/550188635_18051975962559568_2052544455169986920_n.jpg" alt="Set Dos Piezas Pastel" class="product-image" loading="lazy">
+                            <span class="product-badge badge-bestseller">💖 Favorito</span>
+                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="product-quickview-btn">Ver producto</button>
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Conjuntos</span>
+                            <h3 class="product-title">Set Dos Piezas Pastel</h3>
+                            <div class="product-pricing">
+                                <span class="price-current">$820.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card" data-id="6" data-name="Vestido Estampado Rivera" data-price="$790.00" data-oldprice="$980.00" data-badge="Bestseller" data-img="assets/Coleccion/502654341_18040784588559568_3704246550184302102_n.jpg_20260921023048.jpeg">
+                        <div class="product-img-box">
+                            <img src="assets/Coleccion/502654341_18040784588559568_3704246550184302102_n.jpg_20260921023048.jpeg" alt="Vestido Estampado Rivera" class="product-image" loading="lazy">
+                            <span class="product-badge badge-bestseller">⭐ Top Ventas</span>
+                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="product-quickview-btn">Ver producto</button>
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Vestidos</span>
+                            <h3 class="product-title">Vestido Estampado Rivera</h3>
+                            <div class="product-pricing">
+                                <span class="price-current">$790.00</span>
+                                <span class="price-old">$980.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="product-card" data-id="7" data-name="Blusa Lunares Confort" data-price="$490.00" data-oldprice="" data-badge="" data-img="assets/Coleccion/590414129_18061678637559568_4099939275443039249_n.jpg_20260921022929.jpeg">
+                        <div class="product-img-box">
+                            <img src="assets/Coleccion/590414129_18061678637559568_4099939275443039249_n.jpg_20260921022929.jpeg" alt="Blusa Lunares Confort" class="product-image" loading="lazy">
+                            <span class="product-badge badge-chic">✨ Tendencia</span>
+                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="product-quickview-btn">Ver producto</button>
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Blusas</span>
+                            <h3 class="product-title">Blusa Lunares Confort</h3>
+                            <div class="product-pricing">
+                                <span class="price-current">$490.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="product-card" data-id="8" data-name="Vestido Gala Blanco Encaje" data-price="$920.00" data-oldprice="$1,100.00" data-badge="Nuevo" data-img="assets/Coleccion/703622117_18078428159559568_1459892385466088580_n.jpg_20260921021721.jpeg">
+                        <div class="product-img-box">
+                            <img src="assets/Coleccion/703622117_18078428159559568_1459892385466088580_n.jpg_20260921021721.jpeg" alt="Vestido Gala Blanco Encaje" class="product-image" loading="lazy">
+                            <span class="product-badge badge-new">💖 Exclusivo</span>
+                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="product-quickview-btn">Ver producto</button>
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Vestidos</span>
+                            <h3 class="product-title">Vestido Gala Blanco Encaje</h3>
+                            <div class="product-pricing">
+                                <span class="price-current">$920.00</span>
+                                <span class="price-old">$1,100.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUESINA CHIC #2: RIBBON DE INSPIRACIÓN -->
+        <div class="chic-marquee-band marquee-ribbon-pink">
+            <div class="marquee-track marquee-track-reverse">
+                <span>🌸 ESTILO ✧ COMODIDAD ✧ ACTITUD ✧ PRENDAS PENSADAS PARA HACERTE SENTIR ESPECTACULAR ✧ BOUTIQUE FEMENINA ✧ ENCUENTRA TU FAVORITO ✧ VIVE CON SEGURIDAD ✧ BRILLA SIEMPRE ✧ 🌸</span>
+                <span>🌸 ESTILO ✧ COMODIDAD ✧ ACTITUD ✧ PRENDAS PENSADAS PARA HACERTE SENTIR ESPECTACULAR ✧ BOUTIQUE FEMENINA ✧ ENCUENTRA TU FAVORITO ✧ VIVE CON SEGURIDAD ✧ BRILLA SIEMPRE ✧ 🌸</span>
+            </div>
+        </div>
+
+        <!-- 5. NUEVA COLECCIÓN (CAMPAÑA EDITORIAL CON FLYER OFICIAL) -->
+        <section class="editorial-collection-section" id="nueva-coleccion">
+            <div class="site-container">
+                <div class="editorial-card-wrapper">
+                    <div class="editorial-grid">
+                        <div class="editorial-image-col">
+                            <div class="editorial-image-box">
+                                <img src="assets/Flyers/696226642_18077983649559568_3298856220052788965_n.jpg" alt="Editorial Francella Collection Jeans y Estilo" class="editorial-main-img" loading="lazy">
+                                <div class="editorial-accent-badge">
+                                    <span class="editorial-jeans-title">JEANS EN FRANCELLA</span>
+                                    <small>Estilo • Comodidad • Actitud ♡</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editorial-content-col">
+                            <div class="editorial-content-box">
+                                <div class="chic-tape-badge">✨ CAMPAÑA EDITORIAL 2026 ✨</div>
+                                <h2 class="editorial-title">NUEVA COLECCIÓN</h2>
+                                <p class="editorial-quote font-handwriting">"Encuentra prendas que hablan de tu estilo."</p>
+                                <p class="editorial-description">
+                                    Nuestra nueva temporada fue creada pensando en la versatilidad de la mujer moderna. Siluetas que favorecen, telas con movimiento natural y ese toque femenino y sofisticado que te acompaña desde la mañana hasta tu evento más especial.
+                                </p>
+                                <div class="editorial-highlights">
+                                    <div class="ed-highlight-item">
+                                        <span class="ed-icon">✂️</span>
+                                        <div>
+                                            <strong>Corte Impecable</strong>
+                                            <span>Patrones que estilizan y favorecen tu figura</span>
+                                        </div>
+                                    </div>
+                                    <div class="ed-highlight-item">
+                                        <span class="ed-icon">💎</span>
+                                        <div>
+                                            <strong>Detalles Únicos</strong>
+                                            <span>Exclusividad y finura de boutique</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="editorial-cta-wrap">
+                                    <a href="#productos" class="btn-primary editorial-btn btn-glow">
+                                        <span>DESCUBRIR COLECCIÓN</span>
+                                        <div class="btn-shimmer"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUESINA CHIC #3: VENTA DE CARPA & OFERTAS -->
+        <div class="chic-marquee-band marquee-sale">
+            <div class="marquee-track">
+                <span>🔥 ¡GRAN VENTA DE CARPA FRANCELLA! • PRENDAS DESDE $50 • $100 • $200 • ¡GRANDES DESCUENTOS! • HASTA 30% OFF • LAS MEJORES OPORTUNIDADES ESTÁN AQUÍ • ¡APROVECHA HOY! • 🔥</span>
+                <span>🔥 ¡GRAN VENTA DE CARPA FRANCELLA! • PRENDAS DESDE $50 • $100 • $200 • ¡GRANDES DESCUENTOS! • HASTA 30% OFF • LAS MEJORES OPORTUNIDADES ESTÁN AQUÍ • ¡APROVECHA HOY! • 🔥</span>
+            </div>
+        </div>
+
+        <!-- 6. OFERTAS ("GRANDES DESCUENTOS" / VENTA DE CARPA OFICIAL) -->
+        <section class="offers-section" id="ofertas">
+            <div class="site-container">
+                <div class="offers-hero-banner">
+                    <div class="offers-banner-grid">
+                        <div class="offers-banner-visual">
+                            <img src="assets/Flyers/485263690_18033684890559568_9220236557526084362_n.jpg_20260921025438.jpeg" alt="Venta de Carpa Francella Grandes Descuentos Flyer Oficial" class="offers-flyer-img" loading="lazy">
+                        </div>
+                        <div class="offers-banner-text">
+                            <div class="offers-pill-badge">💖 OPORTUNIDADES DE BOUTIQUE 💖</div>
+                            <h2 class="offers-main-title">GRANDES DESCUENTOS</h2>
+                            <p class="offers-main-subtitle font-handwriting">"Tu próximo look puede estar aquí ♡"</p>
+                            <p class="offers-description">
+                                Aprovecha nuestras promociones especiales de Venta de Carpa y rebajas exclusivas. Moda femenina de alta calidad con descuentos de temporada imperdibles.
+                            </p>
+                            <div class="offers-price-pills">
+                                <div class="price-pill pill-50">Prendas desde <strong>$50</strong></div>
+                                <div class="price-pill pill-100">Prendas desde <strong>$100</strong></div>
+                                <div class="price-pill pill-200">Prendas desde <strong>$200</strong></div>
+                            </div>
+                            <div class="offers-countdown-box">
+                                <span>♡ ¡Las mejores oportunidades están aquí para ti en Francella!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products on Sale Grid -->
+                <div class="offers-products-grid">
+                    <!-- Offer Card 1 -->
+                    <div class="product-card offer-card" data-id="101" data-name="Blusa Fucsia Asimétrica" data-price="$299.00" data-oldprice="$420.00" data-badge="-30%" data-img="assets/Coleccion/572532509_18057943133559568_1373157235384384913_n.jpg">
+                        <div class="product-img-box">
+                            <img src="assets/Coleccion/572532509_18057943133559568_1373157235384384913_n.jpg" alt="Blusa Fucsia Asimétrica" class="product-image" loading="lazy">
+                            <span class="product-badge badge-discount">-30%</span>
+                            <span class="product-badge badge-offer-tag">🔥 OFERTA</span>
+                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="product-quickview-btn">Ver producto</button>
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Blusas Rebajadas</span>
+                            <h3 class="product-title">Blusa Fucsia Asimétrica</h3>
+                            <div class="product-pricing">
+                                <span class="price-current price-highlight">$299.00</span>
+                                <span class="price-old">$420.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer Card 2 -->
+                    <div class="product-card offer-card" data-id="102" data-name="Vestido Romántico Pastel" data-price="$480.00" data-oldprice="$690.00" data-badge="-30%" data-img="assets/Coleccion/701623532_18078428225559568_7134077175081159819_n.jpg_20260921023029.jpeg">
+                        <div class="product-img-box">
+                            <img src="assets/Coleccion/701623532_18078428225559568_7134077175081159819_n.jpg_20260921023029.jpeg" alt="Vestido Romántico Pastel" class="product-image" loading="lazy">
+                            <span class="product-badge badge-discount">-30%</span>
+                            <span class="product-badge badge-offer-tag">🔥 OFERTA</span>
+                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="product-quickview-btn">Ver producto</button>
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Vestidos Rebajados</span>
+                            <h3 class="product-title">Vestido Romántico Pastel</h3>
+                            <div class="product-pricing">
+                                <span class="price-current price-highlight">$480.00</span>
+                                <span class="price-old">$690.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer Card 3 -->
+                    <div class="product-card offer-card" data-id="103" data-name="Maxi Vestido Sol Plisado" data-price="$600.00" data-oldprice="$750.00" data-badge="-20%" data-img="assets/Coleccion/521608269_18046087778559568_5861237738348783804_n.jpg_20260921023601.jpeg">
+                        <div class="product-img-box">
+                            <img src="assets/Coleccion/521608269_18046087778559568_5861237738348783804_n.jpg_20260921023601.jpeg" alt="Maxi Vestido Sol Plisado" class="product-image" loading="lazy">
+                            <span class="product-badge badge-discount">-20%</span>
+                            <span class="product-badge badge-offer-tag">🔥 OFERTA</span>
+                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="product-quickview-btn">Ver producto</button>
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Maxi Vestidos</span>
+                            <h3 class="product-title">Maxi Vestido Sol Plisado</h3>
+                            <div class="product-pricing">
+                                <span class="price-current price-highlight">$600.00</span>
+                                <span class="price-old">$750.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer Card 4 -->
+                    <div class="product-card offer-card" data-id="104" data-name="Top Noche Halter Satinado" data-price="$310.00" data-oldprice="$390.00" data-badge="-20%" data-img="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg">
+                        <div class="product-img-box">
+                            <img src="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg" alt="Top Noche Halter Satinado" class="product-image" loading="lazy">
+                            <span class="product-badge badge-discount">-20%</span>
+                            <span class="product-badge badge-offer-tag">🔥 OFERTA</span>
+                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="product-quickview-btn">Ver producto</button>
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Tops & Blusas</span>
+                            <h3 class="product-title">Top Noche Halter Satinado</h3>
+                            <div class="product-pricing">
+                                <span class="price-current price-highlight">$310.00</span>
+                                <span class="price-old">$390.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. BANNER DE MARCA CON LOGO NUEVO -->
+        <section class="brand-strip-section" id="banner-marca">
+            <div class="brand-strip-sparkles-bg"></div>
+            <div class="brand-strip-container">
+                <div class="brand-strip-logo-badge">
+                    <img src="assets/IDENTIDAD/LogoNuevo.png" alt="Francella Monograma Logo" class="strip-logo-img">
+                </div>
+                <h2 class="brand-strip-title">FRANCELLA COLLECTION</h2>
+                <h3 class="brand-strip-tagline font-handwriting">Moda que te encanta ♡</h3>
+                <p class="brand-strip-manifesto">
+                    "Encuentra prendas para cada momento, cada ocasión y cada versión de ti."
+                </p>
+                <div class="brand-strip-divider">
+                    <span class="divider-diamond">✦</span>
+                    <span class="divider-line"></span>
+                    <span class="divider-diamond">💖</span>
+                    <span class="divider-line"></span>
+                    <span class="divider-diamond">✦</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUESINA CHIC #4: SOCIAL MEDIA COMMUNITY -->
+        <div class="chic-marquee-band marquee-social">
+            <div class="marquee-track">
+                <span>📸 SÍGUENOS EN INSTAGRAM @FRANCELLA.MX • OUTFITS REALES • INSPÍRATE TODOS LOS DÍAS • COMPARTE TU LOOK #FRANCELLASTYLE • 💖 VISTE CON ACTITUD • NUEVAS PRENDAS CADA DÍA • 📸</span>
+                <span>📸 SÍGUENOS EN INSTAGRAM @FRANCELLA.MX • OUTFITS REALES • INSPÍRATE TODOS LOS DÍAS • COMPARTE TU LOOK #FRANCELLASTYLE • 💖 VISTE CON ACTITUD • NUEVAS PRENDAS CADA DÍA • 📸</span>
+            </div>
+        </div>
+
+        <!-- 8. INSTAGRAM / REDES -->
+        <section class="social-gallery-section" id="social-gallery">
+            <div class="site-container">
+                <div class="section-header-wrap">
+                    <span class="section-pretitle">🌸 COMUNIDAD & OUTFITS 🌸</span>
+                    <h2 class="section-main-title">SÍGUENOS</h2>
+                    <a href="https://www.instagram.com/francella.mx?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="social-handle-link">@francella.mx ♡</a>
+                    <p class="section-subtitle">Inspírate con los mejores looks reales de nuestras clientas y novedades diarias</p>
+                </div>
+
+                <div class="instagram-grid">
+                    <a href="https://www.instagram.com/francella.mx?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="insta-item">
+                        <img src="assets/Coleccion/711670749_18079967750559568_1095550863985861617_n.jpg_20260921022739.jpeg" alt="Outfit Francella Instagram 1" loading="lazy">
+                        <div class="insta-hover-overlay">
+                            <span class="insta-icon">📷</span>
+                            <span class="insta-likes">💖 1,248</span>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/francella.mx?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="insta-item">
+                        <img src="assets/Coleccion/575287236_18057943151559568_8987624007884572781_n.jpg_20260921023533.jpeg" alt="Outfit Francella Instagram 2" loading="lazy">
+                        <div class="insta-hover-overlay">
+                            <span class="insta-icon">📷</span>
+                            <span class="insta-likes">💖 2,410</span>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/francella.mx?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="insta-item">
+                        <img src="assets/Coleccion/imagen_20260921020937.jpeg" alt="Outfit Francella Instagram 3" loading="lazy">
+                        <div class="insta-hover-overlay">
+                            <span class="insta-icon">📷</span>
+                            <span class="insta-likes">💖 980</span>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/francella.mx?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="insta-item">
+                        <img src="assets/Coleccion/628153545_18067140161559568_3864033881685993988_n.jpg_20260921022319.jpeg" alt="Outfit Francella Instagram 4" loading="lazy">
+                        <div class="insta-hover-overlay">
+                            <span class="insta-icon">📷</span>
+                            <span class="insta-likes">💖 1,532</span>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/francella.mx?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="insta-item">
+                        <img src="assets/Coleccion/723111238_18081577676559568_4753160914651193393_n.jpg_20260921022709.jpeg" alt="Outfit Francella Instagram 5" loading="lazy">
+                        <div class="insta-hover-overlay">
+                            <span class="insta-icon">📷</span>
+                            <span class="insta-likes">💖 1,894</span>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/francella.mx?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="insta-item">
+                        <img src="assets/Coleccion/521608269_18046087778559568_5861237738348783804_n.jpg_20260921023601.jpeg" alt="Outfit Francella Instagram 6" loading="lazy">
+                        <div class="insta-hover-overlay">
+                            <span class="insta-icon">📷</span>
+                            <span class="insta-likes">💖 3,115</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="social-cta-box">
+                    <a href="https://www.instagram.com/francella.mx?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="btn-primary btn-glow">
+                        <span>Ver más outfits en Instagram @francella.mx 💖</span>
+                        <div class="btn-shimmer"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FOOTER -->
+        <footer class="main-footer" id="footer">
+            <div class="site-container">
+                <div class="footer-top-grid">
+                    <!-- Brand Column -->
+                    <div class="footer-col-brand">
+                        <div class="footer-brand-header">
+                            <img src="assets/IDENTIDAD/LogoNuevo.png" alt="Francella Collection" class="footer-logo-img">
+                            <div class="footer-brand-titles">
+                                <span class="footer-brand-name">FRANCELLA</span>
+                                <span class="footer-brand-sub">COLLECTION</span>
+                            </div>
+                        </div>
+                        <p class="footer-tagline font-handwriting">Moda que te encanta ♡</p>
+                        <p class="footer-bio">
+                            Boutique de moda femenina dedicada a realzar tu belleza auténtica con prendas sofisticadas, actuales y llenas de actitud.
+                        </p>
+                    </div>
+
+                    <!-- Column: Tienda -->
+                    <div class="footer-col">
+                        <h3 class="footer-col-title">Tienda</h3>
+                        <ul class="footer-links-list">
+                            <li><a href="#nueva-coleccion">✨ Nueva colección</a></li>
+                            <li><a href="#categoria-vestidos">👗 Vestidos</a></li>
+                            <li><a href="#categoria-blusas">👚 Blusas</a></li>
+                            <li><a href="#categoria-jeans">👖 Jeans</a></li>
+                            <li><a href="#ofertas">🔥 Grandes Ofertas</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column: Ayuda -->
+                    <div class="footer-col">
+                        <h3 class="footer-col-title">Ayuda</h3>
+                        <ul class="footer-links-list">
+                            <li><a href="#contacto" onclick="alert('Contacto Francella Boutique: Escríbenos a contacto@francella.com o vía WhatsApp'); return false;">Contacto</a></li>
+                            <li><a href="#faq" onclick="alert('Preguntas Frecuentes: Envíos en 2-4 días hábiles. Pagos seguros con tarjeta y transferencia bancaria.'); return false;">Preguntas frecuentes</a></li>
+                            <li><a href="#envios" onclick="alert('Envíos a todo el país. Gratis en compras mayores a $999 MXN.'); return false;">Envíos</a></li>
+                            <li><a href="#cambios" onclick="alert('Cambios y devoluciones: Tienes hasta 15 días posteriores a tu entrega en prendas en perfecto estado.'); return false;">Cambios</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column: Síguenos -->
+                    <div class="footer-col">
+                        <h3 class="footer-col-title">Síguenos</h3>
+                        <ul class="footer-links-list">
+                            <li><a href="https://www.instagram.com/francella.mx?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">📸 Instagram</a></li>
+                            <li><a href="https://www.facebook.com/francella.mx" target="_blank" rel="noopener">💬 Facebook</a></li>
+                            <li><a href="https://wa.me/" target="_blank" rel="noopener">📱 WhatsApp</a></li>
+                        </ul>
+                        <div class="footer-whatsapp-badge">
+                            <span>¿Dudas con tu talla o look?</span>
+                            <a href="https://wa.me/" target="_blank" rel="noopener" class="footer-wa-link">Atención personalizada por WhatsApp →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-bar">
+                    <p class="footer-copyright">
+                        &copy; 2026 FRANCELLA COLLECTION. Todos los derechos reservados. Boutique de Moda Femenina ♡
+                    </p>
+                    <div class="footer-payment-badges">
+                        <span>✨ Pago 100% seguro con Tarjetas y Transferencia</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- FLOATING CHIC MUSIC WIDGET -->
+    <aside class="floating-music-widget" id="floating-music-widget" aria-label="Controlador flotante de música">
+        <button class="floating-music-btn is-playing" id="floating-music-btn" aria-label="Reproducir o pausar música ambiente" title="Música Boutique Francella">
+            <span class="music-disc-pulse">
+                <span class="disc-note">🎵</span>
+            </span>
+            <div class="floating-music-meta">
+                <span class="music-title">Boutique Vibe</span>
+                <span class="music-sub" id="floating-status-text">Reproduciendo</span>
+            </div>
+            <div class="music-wave-bars mini">
+                <span class="mbar mbar-1"></span>
+                <span class="mbar mbar-2"></span>
+                <span class="mbar mbar-3"></span>
+            </div>
+        </button>
+    </aside>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
