@@ -371,12 +371,22 @@ function initAmbientMusic() {
     if (headerBtn) headerBtn.addEventListener("click", toggleMusic);
     if (floatingBtn) floatingBtn.addEventListener("click", toggleMusic);
 
-    // Intentar reproducción automática inmediata al cargar
-    playMusic();
+    // Exponer playMusic globalmente para coordinar con el video
+    window.startAmbientMusic = playMusic;
+
+    // Si el video de inicio está activo al cargar, esperar a que el usuario entre a la tienda
+    const videoOverlay = document.getElementById("video-intro-overlay");
+    const isVideoOverlayActive = videoOverlay && videoOverlay.classList.contains("active");
+
+    if (!isVideoOverlayActive) {
+        // Intentar reproducción automática inmediata si no hay video activo
+        playMusic();
+    }
 
     // Fallback: Si el navegador bloqueó el autoplay unmuted, iniciar al primer toque/clic en cualquier parte
     const startOnUserGesture = () => {
-        if (!isAudioManuallyPaused && audio.paused) {
+        const videoActive = videoOverlay && videoOverlay.classList.contains("active");
+        if (!videoActive && !isAudioManuallyPaused && audio.paused) {
             playMusic();
         }
     };
@@ -388,7 +398,7 @@ function initAmbientMusic() {
 }
 
 /* ==========================================================================
-   8. Video Intro Pop-Up Modal (Audio Collision Protection)
+   8. Video Intro Pop-Up Modal (Al Inicio + Audio Sync)
    ========================================================================== */
 function initVideoIntroModal() {
     const videoOverlay = document.getElementById("video-intro-overlay");
@@ -401,8 +411,19 @@ function initVideoIntroModal() {
 
     let wasMusicPlayingBeforeVideo = false;
 
+    // Si el modal está activo al inicio, reproducir el video de bienvenida
+    if (videoOverlay.classList.contains("active")) {
+        document.body.style.overflow = "hidden";
+        introVideo.currentTime = 0;
+        introVideo.play().catch(() => {
+            // Si las políticas de reproducción automática requieren silencio inicial:
+            introVideo.muted = true;
+            introVideo.play().catch(() => {});
+        });
+    }
+
     function openVideoModal() {
-        // Pausar la música ambiental si está sonando para no chocar con el audio del video
+        // Pausar música ambiental si estaba sonando
         if (globalAmbientAudio && !globalAmbientAudio.paused) {
             wasMusicPlayingBeforeVideo = true;
             globalAmbientAudio.pause();
@@ -422,6 +443,7 @@ function initVideoIntroModal() {
 
         videoOverlay.classList.add("active");
         document.body.style.overflow = "hidden";
+        introVideo.muted = false;
         introVideo.currentTime = 0;
         introVideo.play().catch(() => {});
     }
@@ -432,24 +454,13 @@ function initVideoIntroModal() {
         videoOverlay.classList.remove("active");
         document.body.style.overflow = "";
 
-        // Reanudar la música ambiental si estaba sonando antes
-        if (wasMusicPlayingBeforeVideo && globalAmbientAudio && !isAudioManuallyPaused) {
-            globalAmbientAudio.play().then(() => {
-                const headerBtn = document.getElementById("audio-toggle-btn");
-                const floatingBtn = document.getElementById("floating-music-btn");
-                const headerLabel = headerBtn ? headerBtn.querySelector(".audio-status-text") : null;
-                const floatingLabel = document.getElementById("floating-status-text");
-                if (headerBtn) {
-                    headerBtn.classList.remove("is-paused");
-                    headerBtn.classList.add("is-playing");
-                    if (headerLabel) headerLabel.textContent = "Pausar";
-                }
-                if (floatingBtn) {
-                    floatingBtn.classList.remove("is-paused");
-                    floatingBtn.classList.add("is-playing");
-                    if (floatingLabel) floatingLabel.textContent = "Reproduciendo";
-                }
-            }).catch(() => {});
+        // Iniciar o reanudar la música ambiental de boutique
+        if (!isAudioManuallyPaused && globalAmbientAudio) {
+            if (window.startAmbientMusic) {
+                window.startAmbientMusic();
+            } else {
+                globalAmbientAudio.play().catch(() => {});
+            }
         }
     }
 
@@ -470,7 +481,7 @@ function initVideoIntroModal() {
         }
     });
 
-    // Al terminar el video, permitir reanudar música
+    // Al terminar el video de bienvenida, entrar a la tienda y comenzar la música
     introVideo.addEventListener("ended", () => {
         closeVideoModal();
     });

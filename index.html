@@ -21,13 +21,13 @@
         <source src="assets/Musica/Boutique Vibe Pt. 1.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- VIDEO INTRO POP-UP MODAL -->
-    <div id="video-intro-overlay" class="video-intro-overlay">
+    <!-- VIDEO INTRO POP-UP MODAL (AL INICIO) -->
+    <div id="video-intro-overlay" class="video-intro-overlay active">
         <div class="video-popup-container">
             <button id="close-intro-btn" class="video-popup-close-btn" aria-label="Cerrar video">&times;</button>
             <div class="video-popup-badge">✨ BIENVENIDA A FRANCELLA COLLECTION ✨</div>
             <div class="video-wrapper">
-                <video id="intro-video" playsinline controls preload="auto">
+                <video id="intro-video" playsinline controls autoplay preload="auto">
                     <source src="assets/video/Francella_Collection_logo_animating_20260921022013.mp4" type="video/mp4">
                     Tu navegador no soporta video MP4.
                 </video>
@@ -195,10 +195,10 @@
             </div>
             <div class="cart-drawer-items" id="cart-drawer-items">
                 <div class="cart-item">
-                    <img src="assets/Coleccion/723111238_18081577676559568_4753160914651193393_n.jpg_20260921022709.jpeg" alt="Vestido Gala Carmesí Francella" class="cart-item-img">
+                    <img src="assets/Coleccion/723111238_18081577676559568_4753160914651193393_n.jpg_20260921022709.jpeg" alt="Pantalón Cargo Palazzo Satín Rosa Francella" class="cart-item-img">
                     <div class="cart-item-info">
-                        <h4 class="cart-item-name">Vestido Gala Carmesí</h4>
-                        <span class="cart-item-meta">Talla: M • Color: Rojo Boutique</span>
+                        <h4 class="cart-item-name">Pantalón Cargo Satín Rosa</h4>
+                        <span class="cart-item-meta">Talla: M • Satín Rosa Pastel</span>
                         <div class="cart-item-price-row">
                             <span class="cart-item-price">$890.00 MXN</span>
                             <span class="cart-item-qty">Cant: 1</span>
@@ -206,12 +206,12 @@
                     </div>
                 </div>
                 <div class="cart-item">
-                    <img src="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg" alt="Jeans Cargo Cello Francella" class="cart-item-img">
+                    <img src="assets/Coleccion/703622117_18078428159559568_1459892385466088580_n.jpg_20260921021721.jpeg" alt="Conjunto Parisian Lino Marfil Francella" class="cart-item-img">
                     <div class="cart-item-info">
-                        <h4 class="cart-item-name">Pantalón Cello Cargo</h4>
-                        <span class="cart-item-meta">Talla: 7 • Denim Classic</span>
+                        <h4 class="cart-item-name">Conjunto Parisian Lino Marfil</h4>
+                        <span class="cart-item-meta">Talla: CH • Lino Marfil</span>
                         <div class="cart-item-price-row">
-                            <span class="cart-item-price">$680.00 MXN</span>
+                            <span class="cart-item-price">$1,150.00 MXN</span>
                             <span class="cart-item-qty">Cant: 1</span>
                         </div>
                     </div>
@@ -242,12 +242,12 @@
                 </div>
                 <div class="quickview-details">
                     <span class="quickview-badge" id="qv-badge">✨ NUEVO</span>
-                    <h3 class="quickview-title" id="qv-title">Vestido Gala Carmesí</h3>
+                    <h3 class="quickview-title" id="qv-title">Pantalón Cargo Satín Rosa con Top Blanco</h3>
                     <div class="quickview-prices">
                         <span class="qv-price-current" id="qv-price">$890.00 MXN</span>
                         <span class="qv-price-old" id="qv-old-price">$1,150.00 MXN</span>
                     </div>
-                    <p class="quickview-desc" id="qv-desc">Confección boutique de alta calidad, caída elegante y ajuste favorecedor que estiliza tu figura con absoluta comodidad.</p>
+                    <p class="quickview-desc" id="qv-desc">Exclusivo pantalón cargo satinado de silueta bombacha y caída fluida, acompañado de un delicado top blanco bordado. Máxima elegancia y comodidad chic.</p>
                     <div class="quickview-size-selector">
                         <label>Selecciona tu Talla:</label>
                         <div class="size-options">
@@ -379,7 +379,7 @@
                     <!-- 1. Vestidos -->
                     <a href="#productos" class="category-card" id="categoria-vestidos">
                         <div class="cat-image-wrap">
-                            <img src="assets/Coleccion/502654341_18040784588559568_3704246550184302102_n.jpg_20260921023048.jpeg" alt="Vestidos Francella" class="cat-img" loading="lazy">
+                            <img src="assets/Coleccion/521608269_18046087778559568_5861237738348783804_n.jpg_20260921023601.jpeg" alt="Vestidos Francella - Maxi Vestido Verde Salvia" class="cat-img" loading="lazy">
                             <div class="cat-overlay"></div>
                         </div>
                         <div class="cat-info">
@@ -393,13 +393,13 @@
                     <!-- 2. Blusas -->
                     <a href="#productos" class="category-card" id="categoria-blusas">
                         <div class="cat-image-wrap">
-                            <img src="assets/Coleccion/590414129_18061678637559568_4099939275443039249_n.jpg_20260921022929.jpeg" alt="Blusas Francella" class="cat-img" loading="lazy">
+                            <img src="assets/Coleccion/600851504_18062073803559568_2813211033782814434_n.jpg_20260921023625.jpeg" alt="Blusas Francella - Blusa Satín Terracota" class="cat-img" loading="lazy">
                             <div class="cat-overlay"></div>
                         </div>
                         <div class="cat-info">
                             <span class="chic-tag-sticker">Trend Alert ✨</span>
                             <span class="cat-count">Diseños de Moda</span>
-                            <h3 class="cat-name">Blusas</h3>
+                            <h3 class="cat-name">Blusas & Tops</h3>
                             <span class="cat-action">Explorar blusas →</span>
                         </div>
                     </a>
@@ -407,7 +407,7 @@
                     <!-- 3. Jeans -->
                     <a href="#productos" class="category-card" id="categoria-jeans">
                         <div class="cat-image-wrap">
-                            <img src="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg" alt="Jeans Francella" class="cat-img" loading="lazy">
+                            <img src="assets/Coleccion/628153545_18067140161559568_3864033881685993988_n.jpg_20260921022319.jpeg" alt="Jeans Francella - Jeans Ripped Wide Leg" class="cat-img" loading="lazy">
                             <div class="cat-overlay"></div>
                         </div>
                         <div class="cat-info">
@@ -421,7 +421,7 @@
                     <!-- 4. Pantalones -->
                     <a href="#productos" class="category-card" id="categoria-pantalones">
                         <div class="cat-image-wrap">
-                            <img src="assets/Coleccion/600851504_18062073803559568_2813211033782814434_n.jpg_20260921023625.jpeg" alt="Pantalones y Palazzos Francella" class="cat-img" loading="lazy">
+                            <img src="assets/Coleccion/723111238_18081577676559568_4753160914651193393_n.jpg_20260921022709.jpeg" alt="Pantalones Francella - Cargo Satín Bombacho Rosa" class="cat-img" loading="lazy">
                             <div class="cat-overlay"></div>
                         </div>
                         <div class="cat-info">
@@ -435,7 +435,7 @@
                     <!-- 5. Conjuntos -->
                     <a href="#productos" class="category-card" id="categoria-conjuntos">
                         <div class="cat-image-wrap">
-                            <img src="assets/Coleccion/550188635_18051975962559568_2052544455169986920_n.jpg" alt="Conjuntos Francella" class="cat-img" loading="lazy">
+                            <img src="assets/Coleccion/703622117_18078428159559568_1459892385466088580_n.jpg_20260921021721.jpeg" alt="Conjuntos Francella - Set Parisian Lino Marfil" class="cat-img" loading="lazy">
                             <div class="cat-overlay"></div>
                         </div>
                         <div class="cat-info">
@@ -472,10 +472,10 @@
                 </div>
 
                 <div class="products-grid">
-                    <!-- Product 1 -->
-                    <div class="product-card" data-id="1" data-name="Vestido Gala Carmesí" data-price="$890.00" data-oldprice="$1,150.00" data-badge="Nuevo" data-img="assets/Coleccion/723111238_18081577676559568_4753160914651193393_n.jpg_20260921022709.jpeg">
+                    <!-- Product 1: Pantalón Cargo Satín Rosa -->
+                    <div class="product-card" data-id="1" data-name="Pantalón Cargo Satín Rosa con Top Blanco" data-price="$890.00" data-oldprice="$1,150.00" data-badge="Nuevo" data-img="assets/Coleccion/723111238_18081577676559568_4753160914651193393_n.jpg_20260921022709.jpeg">
                         <div class="product-img-box">
-                            <img src="assets/Coleccion/723111238_18081577676559568_4753160914651193393_n.jpg_20260921022709.jpeg" alt="Vestido Gala Carmesí" class="product-image" loading="lazy">
+                            <img src="assets/Coleccion/723111238_18081577676559568_4753160914651193393_n.jpg_20260921022709.jpeg" alt="Pantalón Cargo Satín Rosa con Top Blanco" class="product-image" loading="lazy">
                             <span class="product-badge badge-new">✨ Nuevo</span>
                             <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -485,8 +485,8 @@
                             <button class="product-quickview-btn">Ver producto</button>
                         </div>
                         <div class="product-details">
-                            <span class="product-category">Vestidos</span>
-                            <h3 class="product-title">Vestido Gala Carmesí</h3>
+                            <span class="product-category">Pantalones & Tops</span>
+                            <h3 class="product-title">Pantalón Cargo Satín Rosa con Top Blanco</h3>
                             <div class="product-pricing">
                                 <span class="price-current">$890.00</span>
                                 <span class="price-old">$1,150.00</span>
@@ -494,11 +494,32 @@
                         </div>
                     </div>
 
-                    <!-- Product 2 -->
-                    <div class="product-card" data-id="2" data-name="Vestido Silueta Mostaza" data-price="$750.00" data-oldprice="" data-badge="" data-img="assets/Coleccion/628153545_18067140161559568_3864033881685993988_n.jpg_20260921022319.jpeg">
+                    <!-- Product 2: Jeans Ripped Wide Leg + Playera Minnie -->
+                    <div class="product-card" data-id="2" data-name="Jeans Ripped Wide Leg & Playera Minnie" data-price="$780.00" data-oldprice="" data-badge="" data-img="assets/Coleccion/628153545_18067140161559568_3864033881685993988_n.jpg_20260921022319.jpeg">
                         <div class="product-img-box">
-                            <img src="assets/Coleccion/628153545_18067140161559568_3864033881685993988_n.jpg_20260921022319.jpeg" alt="Vestido Silueta Mostaza" class="product-image" loading="lazy">
-                            <span class="product-badge badge-chic">💖 Chic</span>
+                            <img src="assets/Coleccion/628153545_18067140161559568_3864033881685993988_n.jpg_20260921022319.jpeg" alt="Jeans Ripped Wide Leg y Playera Minnie Lentejuelas" class="product-image" loading="lazy">
+                            <span class="product-badge badge-chic">💖 Urban Chic</span>
+                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="product-quickview-btn">Ver producto</button>
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Jeans & Denim</span>
+                            <h3 class="product-title">Jeans Ripped Wide Leg & Playera Minnie</h3>
+                            <div class="product-pricing">
+                                <span class="price-current">$780.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3: Vestido Mini Rosa Pastel -->
+                    <div class="product-card" data-id="3" data-name="Vestido Mini Rosa Pastel con Lazos" data-price="$690.00" data-oldprice="$850.00" data-badge="Nuevo" data-img="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg">
+                        <div class="product-img-box">
+                            <img src="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg" alt="Vestido Mini Rosa Pastel con Lazos Orientales" class="product-image" loading="lazy">
+                            <span class="product-badge badge-trend">🌸 Tendencia</span>
                             <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
@@ -508,40 +529,19 @@
                         </div>
                         <div class="product-details">
                             <span class="product-category">Vestidos</span>
-                            <h3 class="product-title">Vestido Silueta Mostaza</h3>
+                            <h3 class="product-title">Vestido Mini Rosa Pastel con Lazos</h3>
                             <div class="product-pricing">
-                                <span class="price-current">$750.00</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Product 3 -->
-                    <div class="product-card" data-id="3" data-name="Pantalón Cello Cargo Denim" data-price="$680.00" data-oldprice="$850.00" data-badge="Nuevo" data-img="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg">
-                        <div class="product-img-box">
-                            <img src="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg" alt="Pantalón Cello Cargo Denim" class="product-image" loading="lazy">
-                            <span class="product-badge badge-trend">🔥 Cello Denim</span>
-                            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                                </svg>
-                            </button>
-                            <button class="product-quickview-btn">Ver producto</button>
-                        </div>
-                        <div class="product-details">
-                            <span class="product-category">Jeans</span>
-                            <h3 class="product-title">Pantalón Cello Cargo Denim</h3>
-                            <div class="product-pricing">
-                                <span class="price-current">$680.00</span>
+                                <span class="price-current">$690.00</span>
                                 <span class="price-old">$850.00</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 4 -->
-                    <div class="product-card" data-id="4" data-name="Conjunto Urbano Palazzo" data-price="$720.00" data-oldprice="" data-badge="" data-img="assets/Coleccion/600851504_18062073803559568_2813211033782814434_n.jpg_20260921023625.jpeg">
+                    <!-- Product 4: Blusa Satín Terracota + Falda Leopardo -->
+                    <div class="product-card" data-id="4" data-name="Blusa Satín Terracota & Falda Leopardo" data-price="$880.00" data-oldprice="" data-badge="" data-img="assets/Coleccion/600851504_18062073803559568_2813211033782814434_n.jpg_20260921023625.jpeg">
                         <div class="product-img-box">
-                            <img src="assets/Coleccion/600851504_18062073803559568_2813211033782814434_n.jpg_20260921023625.jpeg" alt="Conjunto Urbano Palazzo" class="product-image" loading="lazy">
-                            <span class="product-badge badge-new">✨ Nuevo</span>
+                            <img src="assets/Coleccion/600851504_18062073803559568_2813211033782814434_n.jpg_20260921023625.jpeg" alt="Blusa Satín Terracota con Lazos y Falda Leopardo" class="product-image" loading="lazy">
+                            <span class="product-badge badge-new">✨ Elegancia</span>
                             <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
@@ -550,18 +550,18 @@
                             <button class="product-quickview-btn">Ver producto</button>
                         </div>
                         <div class="product-details">
-                            <span class="product-category">Pantalones</span>
-                            <h3 class="product-title">Conjunto Urbano Palazzo</h3>
+                            <span class="product-category">Blusas & Faldas</span>
+                            <h3 class="product-title">Blusa Satín Terracota & Falda Leopardo</h3>
                             <div class="product-pricing">
-                                <span class="price-current">$720.00</span>
+                                <span class="price-current">$880.00</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 5 -->
-                    <div class="product-card" data-id="5" data-name="Set Dos Piezas Pastel" data-price="$820.00" data-oldprice="" data-badge="Nuevo" data-img="assets/Coleccion/550188635_18051975962559568_2052544455169986920_n.jpg">
+                    <!-- Product 5: Vestido Denim con Botones Dorados -->
+                    <div class="product-card" data-id="5" data-name="Vestido Denim Midi con Botones Joya" data-price="$820.00" data-oldprice="" data-badge="Nuevo" data-img="assets/Coleccion/550188635_18051975962559568_2052544455169986920_n.jpg">
                         <div class="product-img-box">
-                            <img src="assets/Coleccion/550188635_18051975962559568_2052544455169986920_n.jpg" alt="Set Dos Piezas Pastel" class="product-image" loading="lazy">
+                            <img src="assets/Coleccion/550188635_18051975962559568_2052544455169986920_n.jpg" alt="Vestido Denim Midi con Botones Dorados en Relieve" class="product-image" loading="lazy">
                             <span class="product-badge badge-bestseller">💖 Favorito</span>
                             <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -571,19 +571,19 @@
                             <button class="product-quickview-btn">Ver producto</button>
                         </div>
                         <div class="product-details">
-                            <span class="product-category">Conjuntos</span>
-                            <h3 class="product-title">Set Dos Piezas Pastel</h3>
+                            <span class="product-category">Vestidos Denim</span>
+                            <h3 class="product-title">Vestido Denim Midi con Botones Joya</h3>
                             <div class="product-pricing">
                                 <span class="price-current">$820.00</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 6 -->
-                    <div class="product-card" data-id="6" data-name="Vestido Estampado Rivera" data-price="$790.00" data-oldprice="$980.00" data-badge="Bestseller" data-img="assets/Coleccion/502654341_18040784588559568_3704246550184302102_n.jpg_20260921023048.jpeg">
+                    <!-- Product 6: Shorts Denim con Cadenas Strass -->
+                    <div class="product-card" data-id="6" data-name="Shorts Denim Cristales & Playera Nashville" data-price="$650.00" data-oldprice="$790.00" data-badge="Bestseller" data-img="assets/Coleccion/502654341_18040784588559568_3704246550184302102_n.jpg_20260921023048.jpeg">
                         <div class="product-img-box">
-                            <img src="assets/Coleccion/502654341_18040784588559568_3704246550184302102_n.jpg_20260921023048.jpeg" alt="Vestido Estampado Rivera" class="product-image" loading="lazy">
-                            <span class="product-badge badge-bestseller">⭐ Top Ventas</span>
+                            <img src="assets/Coleccion/502654341_18040784588559568_3704246550184302102_n.jpg_20260921023048.jpeg" alt="Shorts Denim con Cadenas Strass y Playera Nashville" class="product-image" loading="lazy">
+                            <span class="product-badge badge-bestseller">⭐ Western Chic</span>
                             <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
@@ -592,20 +592,20 @@
                             <button class="product-quickview-btn">Ver producto</button>
                         </div>
                         <div class="product-details">
-                            <span class="product-category">Vestidos</span>
-                            <h3 class="product-title">Vestido Estampado Rivera</h3>
+                            <span class="product-category">Jeans & Shorts</span>
+                            <h3 class="product-title">Shorts Denim Cristales & Playera Nashville</h3>
                             <div class="product-pricing">
-                                <span class="price-current">$790.00</span>
-                                <span class="price-old">$980.00</span>
+                                <span class="price-current">$650.00</span>
+                                <span class="price-old">$790.00</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 7 -->
-                    <div class="product-card" data-id="7" data-name="Blusa Lunares Confort" data-price="$490.00" data-oldprice="" data-badge="" data-img="assets/Coleccion/590414129_18061678637559568_4099939275443039249_n.jpg_20260921022929.jpeg">
+                    <!-- Product 7: Vestido Noche Cut-Out con Flor 3D -->
+                    <div class="product-card" data-id="7" data-name="Vestido Noche Cut-Out con Flor 3D Strass" data-price="$1,050.00" data-oldprice="" data-badge="" data-img="assets/Coleccion/590414129_18061678637559568_4099939275443039249_n.jpg_20260921022929.jpeg">
                         <div class="product-img-box">
-                            <img src="assets/Coleccion/590414129_18061678637559568_4099939275443039249_n.jpg_20260921022929.jpeg" alt="Blusa Lunares Confort" class="product-image" loading="lazy">
-                            <span class="product-badge badge-chic">✨ Tendencia</span>
+                            <img src="assets/Coleccion/590414129_18061678637559568_4099939275443039249_n.jpg_20260921022929.jpeg" alt="Vestido Noche Cut-Out con Flor 3D Strass" class="product-image" loading="lazy">
+                            <span class="product-badge badge-chic">💎 Alta Gala</span>
                             <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
@@ -614,18 +614,18 @@
                             <button class="product-quickview-btn">Ver producto</button>
                         </div>
                         <div class="product-details">
-                            <span class="product-category">Blusas</span>
-                            <h3 class="product-title">Blusa Lunares Confort</h3>
+                            <span class="product-category">Vestidos de Gala</span>
+                            <h3 class="product-title">Vestido Noche Cut-Out con Flor 3D Strass</h3>
                             <div class="product-pricing">
-                                <span class="price-current">$490.00</span>
+                                <span class="price-current">$1,050.00</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 8 -->
-                    <div class="product-card" data-id="8" data-name="Vestido Gala Blanco Encaje" data-price="$920.00" data-oldprice="$1,100.00" data-badge="Nuevo" data-img="assets/Coleccion/703622117_18078428159559568_1459892385466088580_n.jpg_20260921021721.jpeg">
+                    <!-- Product 8: Conjunto Parisian Lino Marfil -->
+                    <div class="product-card" data-id="8" data-name="Conjunto Parisian Lino: Top Corset & Palazzo" data-price="$1,150.00" data-oldprice="$1,350.00" data-badge="Nuevo" data-img="assets/Coleccion/703622117_18078428159559568_1459892385466088580_n.jpg_20260921021721.jpeg">
                         <div class="product-img-box">
-                            <img src="assets/Coleccion/703622117_18078428159559568_1459892385466088580_n.jpg_20260921021721.jpeg" alt="Vestido Gala Blanco Encaje" class="product-image" loading="lazy">
+                            <img src="assets/Coleccion/703622117_18078428159559568_1459892385466088580_n.jpg_20260921021721.jpeg" alt="Conjunto Parisian Lino Marfil Top Corset y Pantalón Palazzo" class="product-image" loading="lazy">
                             <span class="product-badge badge-new">💖 Exclusivo</span>
                             <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -635,11 +635,11 @@
                             <button class="product-quickview-btn">Ver producto</button>
                         </div>
                         <div class="product-details">
-                            <span class="product-category">Vestidos</span>
-                            <h3 class="product-title">Vestido Gala Blanco Encaje</h3>
+                            <span class="product-category">Conjuntos & Palazzos</span>
+                            <h3 class="product-title">Conjunto Parisian Lino: Top Corset & Palazzo</h3>
                             <div class="product-pricing">
-                                <span class="price-current">$920.00</span>
-                                <span class="price-old">$1,100.00</span>
+                                <span class="price-current">$1,150.00</span>
+                                <span class="price-old">$1,350.00</span>
                             </div>
                         </div>
                     </div>
@@ -743,10 +743,10 @@
 
                 <!-- Products on Sale Grid -->
                 <div class="offers-products-grid">
-                    <!-- Offer Card 1 -->
-                    <div class="product-card offer-card" data-id="101" data-name="Blusa Fucsia Asimétrica" data-price="$299.00" data-oldprice="$420.00" data-badge="-30%" data-img="assets/Coleccion/572532509_18057943133559568_1373157235384384913_n.jpg">
+                    <!-- Offer Card 1: Conjunto Denim 2 Piezas -->
+                    <div class="product-card offer-card" data-id="101" data-name="Conjunto Denim Perlas & Jeans Wide Leg" data-price="$899.00" data-oldprice="$1,280.00" data-badge="-30%" data-img="assets/Coleccion/572532509_18057943133559568_1373157235384384913_n.jpg">
                         <div class="product-img-box">
-                            <img src="assets/Coleccion/572532509_18057943133559568_1373157235384384913_n.jpg" alt="Blusa Fucsia Asimétrica" class="product-image" loading="lazy">
+                            <img src="assets/Coleccion/572532509_18057943133559568_1373157235384384913_n.jpg" alt="Conjunto Denim Chaquetilla Crop con Perlas y Jeans Wide Leg" class="product-image" loading="lazy">
                             <span class="product-badge badge-discount">-30%</span>
                             <span class="product-badge badge-offer-tag">🔥 OFERTA</span>
                             <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
@@ -757,19 +757,19 @@
                             <button class="product-quickview-btn">Ver producto</button>
                         </div>
                         <div class="product-details">
-                            <span class="product-category">Blusas Rebajadas</span>
-                            <h3 class="product-title">Blusa Fucsia Asimétrica</h3>
+                            <span class="product-category">Conjuntos en Oferta</span>
+                            <h3 class="product-title">Conjunto Denim Perlas & Jeans Wide Leg</h3>
                             <div class="product-pricing">
-                                <span class="price-current price-highlight">$299.00</span>
-                                <span class="price-old">$420.00</span>
+                                <span class="price-current price-highlight">$899.00</span>
+                                <span class="price-old">$1,280.00</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Offer Card 2 -->
-                    <div class="product-card offer-card" data-id="102" data-name="Vestido Romántico Pastel" data-price="$480.00" data-oldprice="$690.00" data-badge="-30%" data-img="assets/Coleccion/701623532_18078428225559568_7134077175081159819_n.jpg_20260921023029.jpeg">
+                    <!-- Offer Card 2: Vestido Wrap Cruzado Hojas Menta -->
+                    <div class="product-card offer-card" data-id="102" data-name="Vestido Wrap Cruzado Blanco Hojas Menta" data-price="$490.00" data-oldprice="$720.00" data-badge="-30%" data-img="assets/Coleccion/701623532_18078428225559568_7134077175081159819_n.jpg_20260921023029.jpeg">
                         <div class="product-img-box">
-                            <img src="assets/Coleccion/701623532_18078428225559568_7134077175081159819_n.jpg_20260921023029.jpeg" alt="Vestido Romántico Pastel" class="product-image" loading="lazy">
+                            <img src="assets/Coleccion/701623532_18078428225559568_7134077175081159819_n.jpg_20260921023029.jpeg" alt="Vestido Wrap Cruzado Blanco con Estampado Hojas Menta" class="product-image" loading="lazy">
                             <span class="product-badge badge-discount">-30%</span>
                             <span class="product-badge badge-offer-tag">🔥 OFERTA</span>
                             <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
@@ -780,20 +780,20 @@
                             <button class="product-quickview-btn">Ver producto</button>
                         </div>
                         <div class="product-details">
-                            <span class="product-category">Vestidos Rebajados</span>
-                            <h3 class="product-title">Vestido Romántico Pastel</h3>
+                            <span class="product-category">Vestidos en Oferta</span>
+                            <h3 class="product-title">Vestido Wrap Cruzado Blanco Hojas Menta</h3>
                             <div class="product-pricing">
-                                <span class="price-current price-highlight">$480.00</span>
-                                <span class="price-old">$690.00</span>
+                                <span class="price-current price-highlight">$490.00</span>
+                                <span class="price-old">$720.00</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Offer Card 3 -->
-                    <div class="product-card offer-card" data-id="103" data-name="Maxi Vestido Sol Plisado" data-price="$600.00" data-oldprice="$750.00" data-badge="-20%" data-img="assets/Coleccion/521608269_18046087778559568_5861237738348783804_n.jpg_20260921023601.jpeg">
+                    <!-- Offer Card 3: Maxi Vestido Verde Salvia -->
+                    <div class="product-card offer-card" data-id="103" data-name="Maxi Vestido Verde Salvia Smocked" data-price="$620.00" data-oldprice="$890.00" data-badge="-30%" data-img="assets/Coleccion/521608269_18046087778559568_5861237738348783804_n.jpg_20260921023601.jpeg">
                         <div class="product-img-box">
-                            <img src="assets/Coleccion/521608269_18046087778559568_5861237738348783804_n.jpg_20260921023601.jpeg" alt="Maxi Vestido Sol Plisado" class="product-image" loading="lazy">
-                            <span class="product-badge badge-discount">-20%</span>
+                            <img src="assets/Coleccion/521608269_18046087778559568_5861237738348783804_n.jpg_20260921023601.jpeg" alt="Maxi Vestido Verde Salvia con Lazos en Hombros" class="product-image" loading="lazy">
+                            <span class="product-badge badge-discount">-30%</span>
                             <span class="product-badge badge-offer-tag">🔥 OFERTA</span>
                             <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -804,19 +804,19 @@
                         </div>
                         <div class="product-details">
                             <span class="product-category">Maxi Vestidos</span>
-                            <h3 class="product-title">Maxi Vestido Sol Plisado</h3>
+                            <h3 class="product-title">Maxi Vestido Verde Salvia Smocked</h3>
                             <div class="product-pricing">
-                                <span class="price-current price-highlight">$600.00</span>
-                                <span class="price-old">$750.00</span>
+                                <span class="price-current price-highlight">$620.00</span>
+                                <span class="price-old">$890.00</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Offer Card 4 -->
-                    <div class="product-card offer-card" data-id="104" data-name="Top Noche Halter Satinado" data-price="$310.00" data-oldprice="$390.00" data-badge="-20%" data-img="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg">
+                    <!-- Offer Card 4: Vestido Cóctel Negro Mangas Lentejuelas -->
+                    <div class="product-card offer-card" data-id="104" data-name="Vestido Cóctel Negro Mangas Lentejuelas" data-price="$690.00" data-oldprice="$950.00" data-badge="-25%" data-img="assets/Coleccion/575287236_18057943151559568_8987624007884572781_n.jpg_20260921023533.jpeg">
                         <div class="product-img-box">
-                            <img src="assets/Coleccion/495560957_18037955888559568_7362738839205202780_n.jpg" alt="Top Noche Halter Satinado" class="product-image" loading="lazy">
-                            <span class="product-badge badge-discount">-20%</span>
+                            <img src="assets/Coleccion/575287236_18057943151559568_8987624007884572781_n.jpg_20260921023533.jpeg" alt="Vestido Cóctel Negro con Mangas Abullonadas en Lentejuelas" class="product-image" loading="lazy">
+                            <span class="product-badge badge-discount">-25%</span>
                             <span class="product-badge badge-offer-tag">🔥 OFERTA</span>
                             <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -826,11 +826,11 @@
                             <button class="product-quickview-btn">Ver producto</button>
                         </div>
                         <div class="product-details">
-                            <span class="product-category">Tops & Blusas</span>
-                            <h3 class="product-title">Top Noche Halter Satinado</h3>
+                            <span class="product-category">Vestidos de Cóctel</span>
+                            <h3 class="product-title">Vestido Cóctel Negro Mangas Lentejuelas</h3>
                             <div class="product-pricing">
-                                <span class="price-current price-highlight">$310.00</span>
-                                <span class="price-old">$390.00</span>
+                                <span class="price-current price-highlight">$690.00</span>
+                                <span class="price-old">$950.00</span>
                             </div>
                         </div>
                     </div>
